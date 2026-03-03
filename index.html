@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALABLE BMS - Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CALABLE Smart BMS Monitoring</h1>
+            <p>© 2026 CALABLE Energy System</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <h3>Tegangan Baterai</h3>
+                <h2 id="voltage">350.0 V</h2>
+                <div class="progress-bar"><div id="v-progress" style="width: 70%;"></div></div>
+                <small>Target Operasi: 350 V</small>
+            </div>
+
+            <div class="card">
+                <h3>Arus Discharging</h3>
+                <h2 id="current">12.5 A</h2>
+                <div class="progress-bar"><div id="i-progress" style="width: 45%;"></div></div>
+                <small>Batas: 2-3x Kapasitas</small>
+            </div>
+
+            <div class="card">
+                <h3>Suhu Baterai</h3>
+                <h2 id="temp">25.4 °C</h2>
+                <div class="progress-bar orange"><div id="t-progress" style="width: 50%;"></div></div>
+                <small>Rentang Optimal: 15°C - 30°C</small>
+            </div>
+
+            <div class="card">
+                <h3>State of Charge (SoC)</h3>
+                <h2 id="soc">85.0 %</h2>
+                <div class="progress-bar green"><div id="soc-progress" style="width: 85%;"></div></div>
+                <small>Optimal DoD: 80%</small>
+            </div>
+
+            <div class="card">
+                <h3>State of Health (SoH)</h3>
+                <h2 id="soh">98.2 %</h2>
+                <div class="progress-bar green"><div id="soh-progress" style="width: 98%;"></div></div>
+                <small id="cycle-info">Siklus: 180 / 10.000</small>
+            </div>
+
+            <div class="card status-card">
+                <h3>Status Operasi</h3>
+                <h2 class="status-steady" id="op-status">STEADY</h2>
+                <hr>
+                <div class="prediction-box">
+                    <p>Remaining Useful Life (RUL)</p>
+                    <h4 id="rul-percent">95.4 %</h4>
+                    <p>Est. Lifetime Tersisa</p>
+                    <h4 id="est-years">26.8 Tahun</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
